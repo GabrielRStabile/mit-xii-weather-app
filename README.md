@@ -11,7 +11,7 @@
 
 <p float="left">
 
-![powered-by-flutter](https://user-images.githubusercontent.com/68667679/204107011-680bc5cd-4e4e-46f6-9d50-ea24fb27a821.svg)
+[![powered-by-flutter](https://user-images.githubusercontent.com/68667679/204107011-680bc5cd-4e4e-46f6-9d50-ea24fb27a821.svg)](https://flutter.dev/)
 
 [![forthebadge](https://forthebadge.com/images/badges/cc-0.svg)](https://creativecommons.org/licenses/by/4.0/deed.pt_BR)
 
