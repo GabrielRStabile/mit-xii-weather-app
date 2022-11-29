@@ -12,8 +12,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        useMaterial3: true,
-        primarySwatch: Colors.blue,
+        useMaterial3: false,
+        primarySwatch: Colors.amber,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -41,26 +41,44 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: const Text("Olá mundo"),
       ),
-      body: Center(
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+          children: [
+            Image.asset(
+              "assets/logo/logo.png",
+              height: 100,
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+            Container(height: 30),
+            const TextField(
+              decoration: InputDecoration(
+                icon: Icon(Icons.accessibility),
+                filled: true,
+                label: Text("Email"),
+                // fillColor: Colors.cyan,
+                border: OutlineInputBorder(),
+              ),
+            ),
+            Container(height: 30),
+            const TextField(
+              decoration: InputDecoration(
+                icon: Icon(Icons.lock),
+                filled: true,
+                border: OutlineInputBorder(),
+                label: Text("Senha"),
+              ),
+              obscureText: true,
+            ),
+            Container(height: 30),
+            ElevatedButton(
+              onPressed: () => print("Tentando"),
+              child: const Text("Entrar"),
             ),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
       ),
     );
   }
